@@ -1,21 +1,29 @@
 import '../Styles/ApiData.css'
-let fake = [1,2,3,4,5,6,7,8];
 
-const ApiData = () => {
+const ParseDate = (date) =>{
+    const d = new Date(date);
+    return `${d.getDay()}/${d.getMonth()}/${d.getFullYear()}`
+}
+
+const ApiData = (props) => {
     return( 
         <div id="ApiData">
             <div id="header">
-                <p>Saldo Total: R$ 50.00</p>
-                <p>Saldo no Periodo: R$ 50.00</p>
+                <p>Saldo Total: R$ {props.saldoTotal}</p>
+                <p>Saldo no Periodo: R$ {props.saldoPeriodo}</p>
             </div>
             <table id="ApiContent">
                 <tr>
                     <th>Dados</th><th>Valência</th><th>Tipo</th><th>Nome do Operador Transacionado</th>
                 </tr>
                     {
-                        fake.map((intem) => {
-                            return <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
-
+                        props.tableContent.map((item) => {
+                            return <tr>
+                                        <td>{ParseDate(item.data_transferencia)}</td>
+                                        <td>{item.valor}</td>
+                                        <td>{item.tipo}</td>
+                                        <td>{item.nome_operador_transacao != null ? item.nome_operador_transacao : ""}</td>
+                                    </tr>
                         })
                     }
             </table>

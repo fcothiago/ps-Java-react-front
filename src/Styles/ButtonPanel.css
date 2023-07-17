@@ -1,5 +1,4 @@
 #button-panel{
-    border: 1px solid black;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;

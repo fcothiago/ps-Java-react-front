@@ -8,12 +8,12 @@ const UserInput = () => {
                 <input placeholder='Nome'/>
             </div>
             <div id="init-date-item">
-                <p>From</p>
-                <input placeholder='Data Inicio'/>
+                <p>Data de Inicio</p>
+                <input placeholder='Data Inicio' type='Date'/>
             </div>
             <div id="end-date-item">
-                <p>To</p>
-                <input placeholder='Data Fim'/>
+                <p>Data de Fim</p>
+                <input placeholder='Data Fim' type='Date'/>
             </div>
         </div>
     )
