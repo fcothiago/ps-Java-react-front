@@ -1,0 +1,26 @@
+@media (max-width: 700px) 
+{ 
+    #UserInput {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-count: 2;
+    }
+    
+    #UserInput div:first-child{
+        grid-column: 1 / span 2;
+    }
+}
+
+@media (min-width: 700px) 
+{ 
+    #UserInput {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        column-count: 3;
+    }
+    
+}
+
+#UserInput div{
+    border: 1px solid black;
+}
