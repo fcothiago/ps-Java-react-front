@@ -1,9 +1,9 @@
 import '../Styles/ButtonPanel.css'
 
-const ButtonPanel = () =>{
+const ButtonPanel = (props) =>{
     return(
         <div id="button-panel">
-            <button>Pesquisar</button>
+            <button onClick={() => props.searchCallBack()}>Pesquisar</button>
         </div>
     )
 }
